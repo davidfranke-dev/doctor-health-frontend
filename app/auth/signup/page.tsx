@@ -20,6 +20,7 @@ export default function page() {
             <AuthForm 
                 submitHandler={signup}
                 text="become a patient"
+                btnText="Sign up"
             />
         </div>
     )

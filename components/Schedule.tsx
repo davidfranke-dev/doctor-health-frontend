@@ -52,8 +52,6 @@ function Schedule() {
     })
 
     
-
-
     return (
         <div className="p-3 max-w-[40rem]">
             <div className="rounded-xl shadow-lg shadow-basic p-2">

@@ -4,9 +4,10 @@ import { UserCircleIcon } from "@heroicons/react/24/outline"
 type Props = {
     submitHandler: Function
     text: string
+    btnText: string
 }
 
-const AuthForm = ({submitHandler, text} : Props) => {
+const AuthForm = ({submitHandler, text, btnText} : Props) => {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("") 
@@ -20,10 +21,10 @@ const AuthForm = ({submitHandler, text} : Props) => {
                 {text}
             </div>
             <div className="flex flex-col">
-                <input onChange={(e) => setEmail(e.target.value)} value={email} className="rounded-xl border focus:outline-none p-1.5 mb-1" placeholder="Email" />
-                <input onChange={(e) => setPassword(e.target.value)} value={password} className="rounded-xl border focus:outline-none p-1.5 mb-1" placeholder="Password" />
+                <input onChange={(e) => setEmail(e.target.value)} value={email} className="form-input" placeholder="Email" />
+                <input onChange={(e) => setPassword(e.target.value)} value={password} className="form-input" placeholder="Password" />
             </div>
-            <button onClick={() => submitHandler(email, password)} className="rounded-xl bg-blue-500 text-white p-1.5 w-[100%]">Sign up</button>
+            <button onClick={() => submitHandler(email, password)} className="rounded-xl bg-blue-500 text-white p-1.5 w-[100%]">{btnText}</button>
         </div>
     )
 }

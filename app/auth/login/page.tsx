@@ -15,6 +15,7 @@ export default function page() {
             <AuthForm 
                 submitHandler={login} 
                 text="login as patient"
+                btnText="Sign in"
             />
         </div> 
     )
